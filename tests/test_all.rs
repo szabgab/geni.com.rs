@@ -19,6 +19,12 @@ mod tests {
                     "https://www.geni.com/people/Super-Testy-Tester/6000000012102785219"
                 ),
                 public: false,
+                guid: String::from("6000000012102785219"),
+                first_name: String::from("Super"),
+                middle_name: String::from("Sev"),
+                last_name: String::from("Tester"),
+                display_name: String::from("Super Testy Tester"),
+                name: String::from("Super Testy Tester"),
             }
         );
     }
