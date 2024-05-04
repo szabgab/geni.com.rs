@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
-    use geni::Name;
     use geni::Document;
+    use geni::Name;
     use geni::Profile;
     use std::collections::HashMap;
     use std::fs::read_to_string;
@@ -83,9 +83,10 @@ mod tests {
                 public: true,
                 url: String::from("https://www.geni.com/api/document-339953"),
                 title: String::from("Jaworow AGAD Births 1877-96"),
-                description: String::from("Jewish Records Indexing - Poland\nhttp://www.jewishgen.org/jri-pl/index.htm"),
+                description: String::from(
+                    "Jewish Records Indexing - Poland\nhttp://www.jewishgen.org/jri-pl/index.htm"
+                ),
             }
         );
     }
-    
 }
