@@ -1,8 +1,8 @@
 use serde::Deserialize;
 
 #[derive(PartialEq, Debug, Deserialize)]
-pub struct Profile<'a> {
-    pub id: &'a str,
-    pub profile_url: &'a str,
+pub struct Profile {
+    pub id: String,
+    pub profile_url: String,
     pub public: bool,
 }
