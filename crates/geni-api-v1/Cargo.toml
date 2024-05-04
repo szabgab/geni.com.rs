@@ -8,7 +8,7 @@ keywords = ["web", "api"]
 categories = ["web-programming::http-server"]
 readme = "README.md"
 repository = "https://github.com/szabgab/geni.com.rs"
-homepage = "https://geni.code-maven.com/"
+#homepage = "https://geni.code-maven.com/"
 
 [dependencies]
 serde = { version = "1.0.200", features = ["derive"] }
