@@ -1,8 +1,8 @@
 #[cfg(test)]
 mod tests {
-    use geni::Document;
-    use geni::Name;
-    use geni::Profile;
+    use geni_api_v1::Document;
+    use geni_api_v1::Name;
+    use geni_api_v1::Profile;
     use std::collections::HashMap;
     use std::fs::read_to_string;
 
