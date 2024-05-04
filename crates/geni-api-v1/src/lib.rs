@@ -27,6 +27,17 @@ pub struct Profile {
 }
 
 #[derive(PartialEq, Debug, Deserialize)]
+pub struct Location {
+    pub city: String,
+    pub state: String,
+    pub country: String,
+    pub country_code: String,
+    pub latitude: f64,
+    pub longitude: f64,
+    pub formatted_location: String,
+}
+
+#[derive(PartialEq, Debug, Deserialize)]
 pub struct Document {
     pub id: String,
     pub guid: String,
@@ -37,4 +48,5 @@ pub struct Document {
     pub url: String,
     pub title: String,
     pub description: String,
+    pub location: Location,
 }

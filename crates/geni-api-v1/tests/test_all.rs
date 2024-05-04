@@ -1,6 +1,7 @@
 #[cfg(test)]
 mod tests {
     use geni_api_v1::Document;
+    use geni_api_v1::Location;
     use geni_api_v1::Name;
     use geni_api_v1::Profile;
     use std::collections::HashMap;
@@ -86,6 +87,15 @@ mod tests {
                 description: String::from(
                     "Jewish Records Indexing - Poland\nhttp://www.jewishgen.org/jri-pl/index.htm"
                 ),
+                location: Location {
+                    city: String::from("Yavoriv"),
+                    state: String::from("L'vivs'ka oblast"),
+                    country: String::from("Ukraine"),
+                    country_code: String::from("UA"),
+                    latitude: 49.9469444,
+                    longitude: 23.3930556,
+                    formatted_location: String::from("Yavoriv, L&#39;vivs&#39;ka oblast, Ukraine"),
+                }
             }
         );
     }
