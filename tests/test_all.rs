@@ -1,6 +1,8 @@
 #[cfg(test)]
 mod tests {
+    use geni::Name;
     use geni::Profile;
+    use std::collections::HashMap;
     use std::fs::read_to_string;
 
     fn read_profile_from_file(path: &str) -> Profile {
@@ -25,6 +27,38 @@ mod tests {
                 last_name: String::from("Tester"),
                 display_name: String::from("Super Testy Tester"),
                 name: String::from("Super Testy Tester"),
+                account_type: String::from("basic"),
+                deleted: false,
+                is_curator: false,
+                names: HashMap::from([
+                    (
+                        String::from("en-US"),
+                        Name {
+                            first_name: String::from("Super"),
+                            last_name: String::from("Tester"),
+                            middle_name: Some(String::from("Sev")),
+                            display_name: String::from("Super Testy Tester"),
+                        }
+                    ),
+                    (
+                        String::from("de"),
+                        Name {
+                            first_name: String::from("Uber"),
+                            last_name: String::from("Testlich"),
+                            display_name: String::from("Uber Testlich"),
+                            middle_name: None,
+                        }
+                    ),
+                    (
+                        String::from("id"),
+                        Name {
+                            first_name: String::from("Indonesian"),
+                            last_name: String::from("Tester"),
+                            display_name: String::from("Indonesian Tester"),
+                            middle_name: None,
+                        }
+                    )
+                ]),
             }
         );
     }
