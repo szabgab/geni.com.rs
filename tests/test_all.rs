@@ -12,10 +12,8 @@ mod tests {
         assert_eq!(
             prof,
             Profile {
-                id: String::from("profile-122248213"),
-                profile_url: String::from(
-                    "https://www.geni.com/people/Super-Testy-Tester/6000000012102785219"
-                ),
+                id: "profile-122248213",
+                profile_url: "https://www.geni.com/people/Super-Testy-Tester/6000000012102785219",
                 public: false,
             }
         );
