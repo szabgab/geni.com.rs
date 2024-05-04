@@ -25,3 +25,16 @@ pub struct Profile {
     pub is_curator: bool,
     pub names: HashMap<String, Name>,
 }
+
+#[derive(PartialEq, Debug, Deserialize)]
+pub struct Document {
+    pub id: String,
+    pub guid: String,
+    pub created_at: String,
+    pub updated_at: String,
+    pub content_type: String,
+    pub public: bool,
+    pub url: String,
+    pub title: String,
+    pub description: String,
+}

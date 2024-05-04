@@ -1,6 +1,7 @@
 #[cfg(test)]
 mod tests {
     use geni::Name;
+    use geni::Document;
     use geni::Profile;
     use std::collections::HashMap;
     use std::fs::read_to_string;
@@ -8,6 +9,11 @@ mod tests {
     fn read_profile_from_file(path: &str) -> Profile {
         let raw = read_to_string(path).unwrap();
         serde_json::from_str::<Profile>(&raw).unwrap()
+    }
+
+    fn read_document_from_file(path: &str) -> Document {
+        let raw = read_to_string(path).unwrap();
+        serde_json::from_str::<Document>(&raw).unwrap()
     }
 
     #[test]
@@ -62,4 +68,24 @@ mod tests {
             }
         );
     }
+
+    #[test]
+    fn read_document() {
+        let document = read_document_from_file("tests/document-339953.json");
+        assert_eq!(
+            document,
+            Document {
+                id: String::from("document-339953"),
+                guid: String::from("6000000011320334348"),
+                created_at: String::from("1296320586"),
+                updated_at: String::from("1417732225"),
+                content_type: String::from("image/png"),
+                public: true,
+                url: String::from("https://www.geni.com/api/document-339953"),
+                title: String::from("Jaworow AGAD Births 1877-96"),
+                description: String::from("Jewish Records Indexing - Poland\nhttp://www.jewishgen.org/jri-pl/index.htm"),
+            }
+        );
+    }
+    
 }
